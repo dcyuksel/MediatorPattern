@@ -1,0 +1,2 @@
+# MediatorPattern
+MediatorPattern with MediatR
