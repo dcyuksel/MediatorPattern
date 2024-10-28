@@ -8,6 +8,6 @@ public class PersonQueryByEmailHandler(MediatrPatternDbContext dbContext) : IReq
 {
     public async Task<PersonEntitiy> Handle(PersonQueryByEmail request, CancellationToken cancellationToken)
     {
-        return await dbContext.People.FirstAsync(cancellationToken);
+        return await dbContext.People.FirstAsync(p=> p.Email == request.Email, cancellationToken);
     }
 }
